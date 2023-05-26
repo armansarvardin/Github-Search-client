@@ -24,6 +24,8 @@ public final class SearchViewModel: ObservableObject {
         searchSubscription = $searchText
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .sink(receiveValue: { [weak self] searchText in
+                self?.items.removeAll()
+                self?.pageNumber = 1
                 self?.performSearch(by: searchText, in: self?.pageNumber ?? 1)
             })
         $pageNumber.sink { [weak self] page in
@@ -39,6 +41,7 @@ public final class SearchViewModel: ObservableObject {
     private func performSearch(by text: String, in page: Int) {
         if !text.isEmpty {
             searchService.search(by: text, in: page)
+                .print("Search subscription: ")
                 .sink { [weak self] completion in
                     switch completion {
                     case .failure(let error):
@@ -46,9 +49,8 @@ public final class SearchViewModel: ObservableObject {
                     case .finished:
                         break
                     }
-                } receiveValue: { data in
-                    print(data.items)
-                    self.items.append(contentsOf: data.items)
+                } receiveValue: { [weak self] data in
+                    self?.items.append(contentsOf: data.items)
                 }.store(in: &localCancellable)
         }
     }

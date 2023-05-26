@@ -28,7 +28,7 @@ extension TargetType {
     var defaultHeaders: [String: String] {
         [
             "Accept": "application/vnd.github+json",
-            "Authorization": "Bearer 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",
+            "Authorization": "Bearer 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",
             "X-GitHub-Api-Version": "2022-11-28"
         ]
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24C53A282A201B1400E38B19 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A272A201B1400E38B19 /* Owner.swift */; };
+		24C53A2A2A209E9600E38B19 /* RepositoryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A292A209E9600E38B19 /* RepositoryWebView.swift */; };
 		24FC0C392A1FAD53006547D6 /* Github_ClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C382A1FAD53006547D6 /* Github_ClientApp.swift */; };
 		24FC0C3B2A1FAD53006547D6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C3A2A1FAD53006547D6 /* SearchView.swift */; };
 		24FC0C3D2A1FAD55006547D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC0C3C2A1FAD55006547D6 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		24C53A272A201B1400E38B19 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		24C53A292A209E9600E38B19 /* RepositoryWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWebView.swift; sourceTree = "<group>"; };
 		24FC0C352A1FAD53006547D6 /* Github Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FC0C382A1FAD53006547D6 /* Github_ClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_ClientApp.swift; sourceTree = "<group>"; };
 		24FC0C3A2A1FAD53006547D6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC0C3A2A1FAD53006547D6 /* SearchView.swift */,
+				24C53A292A209E9600E38B19 /* RepositoryWebView.swift */,
 				24FC0CA02A1FDEF7006547D6 /* RepositoryItemView.swift */,
 			);
 			path = Views;
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24FC0C652A1FB182006547D6 /* AppDelegate.swift in Sources */,
+				24C53A2A2A209E9600E38B19 /* RepositoryWebView.swift in Sources */,
 				24FC0CA12A1FDEF7006547D6 /* RepositoryItemView.swift in Sources */,
 				24FC0C3B2A1FAD53006547D6 /* SearchView.swift in Sources */,
 				24FC0C392A1FAD53006547D6 /* Github_ClientApp.swift in Sources */,

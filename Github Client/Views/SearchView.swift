@@ -12,45 +12,53 @@ import Combine
 struct SearchView: View {
     @State var searchPattern = ""
     @ObservedObject var viewModel = SearchViewModel()
+    @State private var isWebViewShowed: Bool = false
     var body: some View {
-        VStack {
-            TextField(
-                "Search for Repositories",
-                text: $viewModel.searchText,
-                axis: .horizontal
-            )
-            .padding(8)
-            .textFieldStyle(.plain)
-            .overlay {
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.primary, lineWidth: 1)
-                HStack {
-                    Spacer()
-                    Image(systemName: "magnifyingglass")
-                        .padding(.trailing, 16)
+        NavigationStack {
+            VStack {
+                TextField(
+                    "Search for Repositories",
+                    text: $viewModel.searchText,
+                    axis: .horizontal
+                )
+                .padding(8)
+                .textFieldStyle(.plain)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.primary, lineWidth: 1)
+                    HStack {
+                        Spacer()
+                        Image(systemName: "magnifyingglass")
+                            .padding(.trailing, 16)
+                    }
                 }
-            }
-            .padding(8)
-            List(viewModel.items) { item in
-                RepositoryItemView(
-                    item: item
-                ).listItemTint(.accentColor)
+                .padding(8)
+                List(viewModel.items) { item in
+                    Button {
+                        isWebViewShowed = true
+                    } label: {
+                        RepositoryItemView(
+                            item: item
+                        )
+                    }
                     .onAppear {
                         if shouldLoadMore(item) {
                             viewModel.incrementPage()
                         }
                     }
-            }.listStyle(.plain)
-                .listRowInsets(
-                    EdgeInsets(
-                        top: 0,
-                        leading: -8,
-                        bottom: 0,
-                        trailing: 0
+                }.listStyle(.plain)
+                    .listRowInsets(
+                        EdgeInsets(
+                            top: 0,
+                            leading: -8,
+                            bottom: 0,
+                            trailing: 0
+                        )
                     )
-                )
-        }.onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    .navigationBarTitle("Search for Repositories", displayMode: .inline)
+            }.onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
         }
     }
     
