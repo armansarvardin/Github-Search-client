@@ -16,23 +16,9 @@ struct SearchView: View {
         VStack {
             TextField(
                 "Search for Repositories",
-                text: $searchPattern,
+                text: $viewModel.searchText,
                 axis: .horizontal
-            ).onAppear {
-                NotificationCenter.default.addObserver(
-                    forName: UITextField.textDidChangeNotification,
-                    object: nil,
-                    queue: nil
-                ) { notification in
-                    guard let textField = notification.object as? UITextField else {
-                        return
-                    }
-                    
-                    if let newText = textField.text {
-                        self.viewModel.performSearch(by: newText)
-                    }
-                }
-            }
+            )
             .padding(8)
             .textFieldStyle(.plain)
             .overlay {
@@ -45,12 +31,35 @@ struct SearchView: View {
                 }
             }
             .padding(8)
-            List {
-                
-            }
+            List(viewModel.items) { item in
+                RepositoryItemView(
+                    item: item
+                ).listItemTint(.accentColor)
+                    .onAppear {
+                        if shouldLoadMore(item) {
+                            viewModel.incrementPage()
+                        }
+                    }
+            }.listStyle(.plain)
+                .listRowInsets(
+                    EdgeInsets(
+                        top: 0,
+                        leading: -8,
+                        bottom: 0,
+                        trailing: 0
+                    )
+                )
         }.onTapGesture {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
+    }
+    
+    private func shouldLoadMore(_ item: RepositoryItem) -> Bool {
+        if let lastItem = viewModel.items.last,
+           item.id == lastItem.id {
+            return true
+        }
+        return false
     }
 }
 

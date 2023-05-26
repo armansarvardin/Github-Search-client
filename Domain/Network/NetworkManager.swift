@@ -28,7 +28,7 @@ extension TargetType {
     var defaultHeaders: [String: String] {
         [
             "Accept": "application/vnd.github+json",
-            "Authorization": "Bearer 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",
+            "Authorization": "Bearer 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",
             "X-GitHub-Api-Version": "2022-11-28"
         ]
     }
@@ -72,27 +72,11 @@ struct NetworkManager {
                 }
                 return data
             }
-            .mapError { error -> APIError in
-                if let apiError = error as? APIError {
-                    return apiError
-                } else {
-                    return APIError.requestFailed(error)
-                }
+            .decode(type: responseType, decoder: target.decoder)
+            .mapError { error in
+                APIError.requestFailed(error)
             }
-            .flatMap { data -> AnyPublisher<R, APIError> in
-                do {
-                    let decodedResponse = try target.decoder.decode(R.self, from: data)
-                    return Result.success(decodedResponse)
-                        .publisher
-                        .append(Empty<R, APIError>(completeImmediately: true))
-                        .eraseToAnyPublisher()
-                } catch {
-                    return Result.failure(APIError.requestFailed(error))
-                        .publisher
-                        .eraseToAnyPublisher()
-                }
-            }
-            .receive(on: DispatchQueue.main)
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
 }

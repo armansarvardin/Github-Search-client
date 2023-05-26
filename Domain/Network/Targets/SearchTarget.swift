@@ -12,7 +12,7 @@ fileprivate enum Constants {
 }
 
 enum SearchTarget: TargetType {
-    case search(name: String)
+    case search(name: String, pageNumber: Int)
     
     var baseURL: URL {
         return URL(string: "https://api.github.com")!
@@ -36,10 +36,12 @@ enum SearchTarget: TargetType {
     
     var queryParameters: [String : String]? {
         switch self {
-        case .search(let name):
+        case .search(let name, let pageNumber):
             return [
                 "q": name,
-                "per_page": "\(Constants.perPage)"
+                "per_page": "\(Constants.perPage)",
+                "sort": "stars",
+                "page": "\(pageNumber)"
             ]
         }
     }

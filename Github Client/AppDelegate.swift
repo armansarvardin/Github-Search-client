@@ -17,8 +17,6 @@ final class AppDelegate: NSObject,  UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
-        let service = SearchService()
-        service.search(by: "")
         return true
     }
 }
