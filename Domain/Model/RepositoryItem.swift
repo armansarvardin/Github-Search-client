@@ -19,7 +19,8 @@ public struct RepositoryItem: Codable, Identifiable {
     public let owner: Owner
     
     enum CodingKeys: String, CodingKey {
-        case id, url, description, language, owner
+        case id, description, language, owner
+        case url = "html_url"
         case fullName = "full_name"
         case stargazersCount = "stargazers_count"
         case updatedAt = "updated_at"
@@ -31,4 +32,6 @@ public struct RepositoryItem: Codable, Identifiable {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return dateFormatter.date(from: updatedAt) ?? Date()
     }
+    
+    public var isViewed: Bool = false
 }

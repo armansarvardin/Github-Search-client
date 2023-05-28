@@ -17,6 +17,12 @@ struct RepositoryItemView: View {
     
     var body: some View {
         HStack(alignment: .top) {
+            if !item.isViewed {
+                RoundedRectangle(cornerRadius: 3)
+                    .frame(width: 6, height: .infinity)
+                    .foregroundColor(Color.indigo)
+            }
+            
             VStack(alignment: .leading, spacing: 2) {
                 HStack {
                     Text(item.fullName)
@@ -26,10 +32,10 @@ struct RepositoryItemView: View {
                 .padding(.bottom ,4)
                 Text(item.description ?? "No description")
                     .lineLimit(2)
-                    .font(.body)
+                    .font(.system(size: 15))
                     .foregroundColor(.primary)
                 HStack {
-                    Text("\(item.language ?? "N/A") • \(item.stargazersCount ?? 0) • Built by")
+                    Text("\(item.language ?? "N/A") • Stars \(item.stargazersCount ?? 0) • Built by")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                     AsyncImage(url: URL(string: item.owner.avatarUrl ?? "")) { phase in

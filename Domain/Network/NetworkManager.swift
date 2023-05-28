@@ -1,12 +1,6 @@
 import Foundation
 import Combine
-
-public enum APIError: Error {
-    case invalidURL
-    case requestFailed(Error)
-    case invalidResponse
-    // Add more error cases as needed
-}
+import KeychainSwift
 
 enum HTTPMethod: String {
     case get = "GET"
@@ -14,21 +8,12 @@ enum HTTPMethod: String {
     // Add more HTTP methods as needed
 }
 
-protocol TargetType {
-    var baseURL: URL { get }
-    var path: String { get }
-    var method: HTTPMethod { get }
-    var headers: [String: String]? { get }
-    var body: Data? { get }
-    var queryParameters: [String: String]? { get }
-    var decoder: JSONDecoder { get }
-}
-
 extension TargetType {
     var defaultHeaders: [String: String] {
-        [
+        let keychain = KeychainSwift()
+        return [
             "Accept": "application/vnd.github+json",
-            "Authorization": "Bearer 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",
+            "Authorization": "Bearer \(keychain.get(GlobalContants.tokenKeychainKey) ?? "")",
             "X-GitHub-Api-Version": "2022-11-28"
         ]
     }

@@ -38,6 +38,12 @@ public final class SearchViewModel: ObservableObject {
         pageNumber += 1
     }
     
+    public func markRepoAsViewed(repoId: Int) {
+        if let repoIndex = items.firstIndex(where: { $0.id == repoId }) {
+            items[repoIndex].isViewed = true
+        }
+    }
+    
     private func performSearch(by text: String, in page: Int) {
         if !text.isEmpty {
             searchService.search(by: text, in: page)
@@ -54,4 +60,5 @@ public final class SearchViewModel: ObservableObject {
                 }.store(in: &localCancellable)
         }
     }
+    
 }

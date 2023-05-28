@@ -7,8 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24455B4D2A21C632006204CE /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 24455B4C2A21C632006204CE /* KeychainSwift */; };
+		24455B5D2A221456006204CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24455B5C2A221456006204CE /* GoogleService-Info.plist */; };
+		24455B9B2A2217BB006204CE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 24455B9A2A2217BB006204CE /* FirebaseAuthCombine-Community */; };
+		24455BA12A221956006204CE /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BA02A221956006204CE /* AuthView.swift */; };
+		24455BA52A23B1BD006204CE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BA42A23B1BD006204CE /* AuthService.swift */; };
+		24455BA72A23B2B8006204CE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 24455BA62A23B2B8006204CE /* FirebaseAuth */; };
+		24455BAA2A23B7D2006204CE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BA92A23B7D2006204CE /* APIError.swift */; };
+		24455BAC2A23B7FB006204CE /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BAB2A23B7FB006204CE /* BaseTargetType.swift */; };
+		24455BAE2A23B814006204CE /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BAD2A23B814006204CE /* AuthError.swift */; };
+		24455BB02A23BFE3006204CE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BAF2A23BFE3006204CE /* AuthViewModel.swift */; };
+		24455BB22A23CF11006204CE /* Launchscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24455BB12A23CF11006204CE /* Launchscreen.storyboard */; };
+		24455BB42A23D245006204CE /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BB32A23D245006204CE /* UserDataManager.swift */; };
+		24455BB62A23D43B006204CE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BB52A23D43B006204CE /* UserInfo.swift */; };
+		24455BBA2A23DD38006204CE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BB92A23DD38006204CE /* UserProfileView.swift */; };
+		24455BBC2A23DF0B006204CE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BBB2A23DF0B006204CE /* UserProfileViewModel.swift */; };
+		24455BC02A23F7C6006204CE /* AuthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BBF2A23F7C6006204CE /* AuthorizedView.swift */; };
 		24C53A282A201B1400E38B19 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A272A201B1400E38B19 /* Owner.swift */; };
 		24C53A2A2A209E9600E38B19 /* RepositoryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A292A209E9600E38B19 /* RepositoryWebView.swift */; };
+		24C53A2D2A20D27400E38B19 /* RepositoryHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A2C2A20D27400E38B19 /* RepositoryHistoryView.swift */; };
+		24C53A302A20D78800E38B19 /* RepositoryHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A2F2A20D78800E38B19 /* RepositoryHistoryManager.swift */; };
+		24C53A322A20DA0D00E38B19 /* RepositoryHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A312A20DA0D00E38B19 /* RepositoryHistoryViewModel.swift */; };
+		24C53A392A20EC9F00E38B19 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 24C53A382A20EC9F00E38B19 /* KeychainSwift */; };
 		24FC0C392A1FAD53006547D6 /* Github_ClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C382A1FAD53006547D6 /* Github_ClientApp.swift */; };
 		24FC0C3B2A1FAD53006547D6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C3A2A1FAD53006547D6 /* SearchView.swift */; };
 		24FC0C3D2A1FAD55006547D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC0C3C2A1FAD55006547D6 /* Assets.xcassets */; };
@@ -23,7 +43,6 @@
 		24FC0C8A2A1FB42C006547D6 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C892A1FB42C006547D6 /* SearchService.swift */; };
 		24FC0C8C2A1FB69B006547D6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C8B2A1FB69B006547D6 /* NetworkManager.swift */; };
 		24FC0C902A1FB8DC006547D6 /* SearchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C8F2A1FB8DC006547D6 /* SearchTarget.swift */; };
-		24FC0C942A1FBED3006547D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C642A1FB182006547D6 /* AppDelegate.swift */; };
 		24FC0C972A1FCAAB006547D6 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C962A1FCAAB006547D6 /* Repositories.swift */; };
 		24FC0C9A2A1FD1CF006547D6 /* RepositoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C992A1FD1CF006547D6 /* RepositoryItem.swift */; };
 		24FC0C9C2A1FD32A006547D6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC0C9B2A1FD32A006547D6 /* SearchViewModel.swift */; };
@@ -69,8 +88,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24455B5C2A221456006204CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24455BA02A221956006204CE /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		24455BA42A23B1BD006204CE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		24455BA92A23B7D2006204CE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		24455BAB2A23B7FB006204CE /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		24455BAD2A23B814006204CE /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		24455BAF2A23BFE3006204CE /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		24455BB12A23CF11006204CE /* Launchscreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchscreen.storyboard; sourceTree = "<group>"; };
+		24455BB32A23D245006204CE /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		24455BB52A23D43B006204CE /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		24455BB92A23DD38006204CE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		24455BBB2A23DF0B006204CE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		24455BBF2A23F7C6006204CE /* AuthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedView.swift; sourceTree = "<group>"; };
 		24C53A272A201B1400E38B19 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		24C53A292A209E9600E38B19 /* RepositoryWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWebView.swift; sourceTree = "<group>"; };
+		24C53A2C2A20D27400E38B19 /* RepositoryHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHistoryView.swift; sourceTree = "<group>"; };
+		24C53A2F2A20D78800E38B19 /* RepositoryHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHistoryManager.swift; sourceTree = "<group>"; };
+		24C53A312A20DA0D00E38B19 /* RepositoryHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHistoryViewModel.swift; sourceTree = "<group>"; };
+		24C53A432A21BF4700E38B19 /* Github-Client-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Github-Client-Info.plist"; sourceTree = SOURCE_ROOT; };
 		24FC0C352A1FAD53006547D6 /* Github Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FC0C382A1FAD53006547D6 /* Github_ClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_ClientApp.swift; sourceTree = "<group>"; };
 		24FC0C3A2A1FAD53006547D6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -98,7 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C53A392A20EC9F00E38B19 /* KeychainSwift in Frameworks */,
 				24FC0C822A1FB33C006547D6 /* Domain.framework in Frameworks */,
+				24455B9B2A2217BB006204CE /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,12 +158,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24455B4D2A21C632006204CE /* KeychainSwift in Frameworks */,
+				24455BA72A23B2B8006204CE /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24455BA82A23B7C8006204CE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				24455BA92A23B7D2006204CE /* APIError.swift */,
+				24455BAD2A23B814006204CE /* AuthError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		24B26C902A21C526005D9C92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24C53A2B2A20D25700E38B19 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				24FC0CA02A1FDEF7006547D6 /* RepositoryItemView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		24C53A2E2A20D77100E38B19 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				24C53A2F2A20D78800E38B19 /* RepositoryHistoryManager.swift */,
+				24455BB32A23D245006204CE /* UserDataManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		24C53A332A20E06600E38B19 /* Runtime Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Runtime Storage";
+			sourceTree = "<group>";
+		};
+		24C53A342A20E09300E38B19 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				24FC0C642A1FB182006547D6 /* AppDelegate.swift */,
+				24FC0C382A1FAD53006547D6 /* Github_ClientApp.swift */,
+				24455BBF2A23F7C6006204CE /* AuthorizedView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		24FC0C2C2A1FAD53006547D6 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +224,7 @@
 				24FC0C522A1FAD55006547D6 /* Github ClientUITests */,
 				24FC0C7D2A1FB33C006547D6 /* Domain */,
 				24FC0C362A1FAD53006547D6 /* Products */,
+				24B26C902A21C526005D9C92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,11 +242,13 @@
 		24FC0C372A1FAD53006547D6 /* Github Client */ = {
 			isa = PBXGroup;
 			children = (
-				24FC0C642A1FB182006547D6 /* AppDelegate.swift */,
-				24FC0C382A1FAD53006547D6 /* Github_ClientApp.swift */,
+				24C53A432A21BF4700E38B19 /* Github-Client-Info.plist */,
+				24455B5C2A221456006204CE /* GoogleService-Info.plist */,
+				24C53A342A20E09300E38B19 /* Application */,
 				24FC0C9D2A1FD5D9006547D6 /* Views */,
 				24FC0C3C2A1FAD55006547D6 /* Assets.xcassets */,
 				24FC0C3E2A1FAD55006547D6 /* Preview Content */,
+				24455BB12A23CF11006204CE /* Launchscreen.storyboard */,
 			);
 			path = "Github Client";
 			sourceTree = "<group>";
@@ -188,10 +281,12 @@
 		24FC0C7D2A1FB33C006547D6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				24FC0C872A1FB348006547D6 /* GlobalContants.swift */,
-				24FC0C952A1FCA87006547D6 /* Model */,
-				24FC0C982A1FD041006547D6 /* ViewModel */,
 				24FC0C8D2A1FB8A6006547D6 /* Network */,
+				24FC0C982A1FD041006547D6 /* ViewModel */,
+				24FC0C952A1FCA87006547D6 /* Model */,
+				24C53A2E2A20D77100E38B19 /* Persistence */,
+				24C53A332A20E06600E38B19 /* Runtime Storage */,
+				24FC0C872A1FB348006547D6 /* GlobalContants.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -200,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC0C8B2A1FB69B006547D6 /* NetworkManager.swift */,
+				24455BA82A23B7C8006204CE /* Errors */,
 				24FC0C912A1FBA5C006547D6 /* Services */,
 				24FC0C8E2A1FB8D1006547D6 /* Targets */,
 			);
@@ -210,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC0C8F2A1FB8DC006547D6 /* SearchTarget.swift */,
+				24455BAB2A23B7FB006204CE /* BaseTargetType.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -218,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC0C892A1FB42C006547D6 /* SearchService.swift */,
+				24455BA42A23B1BD006204CE /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC0C962A1FCAAB006547D6 /* Repositories.swift */,
+				24455BB52A23D43B006204CE /* UserInfo.swift */,
 				24FC0C992A1FD1CF006547D6 /* RepositoryItem.swift */,
 				24C53A272A201B1400E38B19 /* Owner.swift */,
 			);
@@ -236,6 +335,9 @@
 			isa = PBXGroup;
 			children = (
 				24FC0C9B2A1FD32A006547D6 /* SearchViewModel.swift */,
+				24C53A312A20DA0D00E38B19 /* RepositoryHistoryViewModel.swift */,
+				24455BAF2A23BFE3006204CE /* AuthViewModel.swift */,
+				24455BBB2A23DF0B006204CE /* UserProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,9 +345,12 @@
 		24FC0C9D2A1FD5D9006547D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24C53A2B2A20D25700E38B19 /* SubView */,
 				24FC0C3A2A1FAD53006547D6 /* SearchView.swift */,
 				24C53A292A209E9600E38B19 /* RepositoryWebView.swift */,
-				24FC0CA02A1FDEF7006547D6 /* RepositoryItemView.swift */,
+				24455BA02A221956006204CE /* AuthView.swift */,
+				24C53A2C2A20D27400E38B19 /* RepositoryHistoryView.swift */,
+				24455BB92A23DD38006204CE /* UserProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +358,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		24C53A422A21BF1100E38B19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24FC0C772A1FB33B006547D6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +379,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24FC0C592A1FAD55006547D6 /* Build configuration list for PBXNativeTarget "Github Client" */;
 			buildPhases = (
+				24C53A422A21BF1100E38B19 /* Headers */,
 				24FC0C312A1FAD53006547D6 /* Sources */,
 				24FC0C322A1FAD53006547D6 /* Frameworks */,
 				24FC0C332A1FAD53006547D6 /* Resources */,
@@ -278,6 +391,10 @@
 				24FC0C812A1FB33C006547D6 /* PBXTargetDependency */,
 			);
 			name = "Github Client";
+			packageProductDependencies = (
+				24C53A382A20EC9F00E38B19 /* KeychainSwift */,
+				24455B9A2A2217BB006204CE /* FirebaseAuthCombine-Community */,
+			);
 			productName = "Github Client";
 			productReference = 24FC0C352A1FAD53006547D6 /* Github Client.app */;
 			productType = "com.apple.product-type.application";
@@ -332,6 +449,10 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				24455B4C2A21C632006204CE /* KeychainSwift */,
+				24455BA62A23B2B8006204CE /* FirebaseAuth */,
+			);
 			productName = Domain;
 			productReference = 24FC0C7C2A1FB33B006547D6 /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -372,6 +493,10 @@
 				Base,
 			);
 			mainGroup = 24FC0C2C2A1FAD53006547D6;
+			packageReferences = (
+				24C53A372A20EC9F00E38B19 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				24455B992A2217BB006204CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 24FC0C362A1FAD53006547D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -390,7 +515,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24FC0C402A1FAD55006547D6 /* Preview Assets.xcassets in Resources */,
+				24455BB22A23CF11006204CE /* Launchscreen.storyboard in Resources */,
 				24FC0C3D2A1FAD55006547D6 /* Assets.xcassets in Resources */,
+				24455B5D2A221456006204CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,10 +549,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24455BA12A221956006204CE /* AuthView.swift in Sources */,
 				24FC0C652A1FB182006547D6 /* AppDelegate.swift in Sources */,
 				24C53A2A2A209E9600E38B19 /* RepositoryWebView.swift in Sources */,
+				24455BC02A23F7C6006204CE /* AuthorizedView.swift in Sources */,
+				24455BBA2A23DD38006204CE /* UserProfileView.swift in Sources */,
 				24FC0CA12A1FDEF7006547D6 /* RepositoryItemView.swift in Sources */,
 				24FC0C3B2A1FAD53006547D6 /* SearchView.swift in Sources */,
+				24C53A2D2A20D27400E38B19 /* RepositoryHistoryView.swift in Sources */,
 				24FC0C392A1FAD53006547D6 /* Github_ClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,12 +582,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C53A322A20DA0D00E38B19 /* RepositoryHistoryViewModel.swift in Sources */,
 				24FC0C9A2A1FD1CF006547D6 /* RepositoryItem.swift in Sources */,
-				24FC0C942A1FBED3006547D6 /* AppDelegate.swift in Sources */,
 				24FC0C9C2A1FD32A006547D6 /* SearchViewModel.swift in Sources */,
 				24FC0C8C2A1FB69B006547D6 /* NetworkManager.swift in Sources */,
+				24455BB42A23D245006204CE /* UserDataManager.swift in Sources */,
+				24455BB62A23D43B006204CE /* UserInfo.swift in Sources */,
 				24C53A282A201B1400E38B19 /* Owner.swift in Sources */,
+				24455BB02A23BFE3006204CE /* AuthViewModel.swift in Sources */,
+				24455BAC2A23B7FB006204CE /* BaseTargetType.swift in Sources */,
+				24455BAE2A23B814006204CE /* AuthError.swift in Sources */,
+				24455BAA2A23B7D2006204CE /* APIError.swift in Sources */,
+				24455BA52A23B1BD006204CE /* AuthService.swift in Sources */,
+				24455BBC2A23DF0B006204CE /* UserProfileViewModel.swift in Sources */,
 				24FC0C882A1FB348006547D6 /* GlobalContants.swift in Sources */,
+				24C53A302A20D78800E38B19 /* RepositoryHistoryManager.swift in Sources */,
 				24FC0C902A1FB8DC006547D6 /* SearchTarget.swift in Sources */,
 				24FC0C8A2A1FB42C006547D6 /* SearchService.swift in Sources */,
 				24FC0C972A1FCAAB006547D6 /* Repositories.swift in Sources */,
@@ -611,11 +751,13 @@
 				DEVELOPMENT_TEAM = GC89CV545Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Github-Client-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Github Client";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Launchscreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,11 +790,13 @@
 				DEVELOPMENT_TEAM = GC89CV545Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Github-Client-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Github Client";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Launchscreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -860,6 +1004,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24455B992A2217BB006204CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		24C53A372A20EC9F00E38B19 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24455B4C2A21C632006204CE /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24C53A372A20EC9F00E38B19 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		24455B9A2A2217BB006204CE /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24455B992A2217BB006204CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		24455BA62A23B2B8006204CE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24455B992A2217BB006204CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		24C53A382A20EC9F00E38B19 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24C53A372A20EC9F00E38B19 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 24FC0C2D2A1FAD53006547D6 /* Project object */;
 }

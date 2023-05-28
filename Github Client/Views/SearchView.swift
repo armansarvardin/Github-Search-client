@@ -34,8 +34,12 @@ struct SearchView: View {
                 }
                 .padding(8)
                 List(viewModel.items) { item in
-                    Button {
-                        isWebViewShowed = true
+                    NavigationLink {
+                        RepositoryWebView(item: item)
+                            .onAppear {
+                                viewModel.markRepoAsViewed(repoId: item.id)
+                                RepositoryHistoryManager.shared.addVisitedRepo(item)
+                            }
                     } label: {
                         RepositoryItemView(
                             item: item
@@ -56,8 +60,6 @@ struct SearchView: View {
                         )
                     )
                     .navigationBarTitle("Search for Repositories", displayMode: .inline)
-            }.onTapGesture {
-                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
         }
     }
