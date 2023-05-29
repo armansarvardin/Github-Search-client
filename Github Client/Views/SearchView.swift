@@ -15,7 +15,7 @@ struct SearchView: View {
     @State private var isWebViewShowed: Bool = false
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 4) {
                 TextField(
                     "Search for Repositories",
                     text: $viewModel.searchText,
@@ -33,6 +33,10 @@ struct SearchView: View {
                     }
                 }
                 .padding(8)
+                HStack {
+                    Text("Sorted by:")
+                    SegmentPicker(selectedSegment: $viewModel.sortingPickerType)
+                }.padding(.leading, 8)
                 List(viewModel.items) { item in
                     NavigationLink {
                         RepositoryWebView(item: item)

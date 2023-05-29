@@ -160,6 +160,21 @@
                   endingLineNumber = "14"
                   offsetFromSymbolStart = "308">
                </Location>
+               <Location
+                  uuid = "B381A656-99FB-4A31-A277-84540678A75B - c5168bc34417a5e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Github_Client.AppDelegate.application(_: __C.UIApplication, open: Foundation.URL, options: Swift.Dictionary&lt;__C.UIApplicationOpenURLOptionsKey, Any&gt;) -&gt; Swift.Bool"
+                  moduleName = "Github Client"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/armansarvardin/Github%20Client/Github%20Client/Application/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "348">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -433,22 +448,6 @@
                   offsetFromSymbolStart = "140">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E3F3685-24B3-440C-B35E-44F28E9D7049"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Domain/Network/Services/AuthService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "signIn()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

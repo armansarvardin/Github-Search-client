@@ -8,6 +8,12 @@
 import Foundation
 import Combine
 
+public enum SortingPickerType: String {
+    case stars
+    case forks
+    case updated
+}
+
 public final class SearchViewModel: ObservableObject {
     var localCancellable = Set<AnyCancellable>()
     private var searchSubscription : AnyCancellable?
@@ -15,22 +21,46 @@ public final class SearchViewModel: ObservableObject {
     @Published public var receivedError: String?
     @Published public var items: [RepositoryItem] = []
     @Published private var pageNumber: Int = 1
+    @Published public var sortingPickerType: SortingPickerType = .stars
     
     private var cancellables = Set<AnyCancellable>()
     var searchService: SearchServiceProtocol
     
     public init(searchService: SearchServiceProtocol = SearchService()) {
         self.searchService = searchService
+        
         searchSubscription = $searchText
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .sink(receiveValue: { [weak self] searchText in
                 self?.items.removeAll()
                 self?.pageNumber = 1
-                self?.performSearch(by: searchText, in: self?.pageNumber ?? 1)
+                self?.performSearch(
+                    by: searchText,
+                    in: self?.pageNumber ?? 1,
+                    sortingType: self?.sortingPickerType.rawValue ?? "stars"
+                )
             })
+        
         $pageNumber.sink { [weak self] page in
             guard let self else { return }
-            performSearch(by: searchText, in: pageNumber)
+            performSearch(
+                by: searchText,
+                in: pageNumber,
+                sortingType: sortingPickerType.rawValue
+            )
+        }.store(in: &localCancellable)
+        
+        $sortingPickerType
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .sink { [weak self] type in
+            guard let self else { return  }
+            items.removeAll()
+            pageNumber = 1
+            performSearch(
+                by: searchText,
+                in: pageNumber,
+                sortingType: type.rawValue
+            )
         }.store(in: &localCancellable)
     }
     
@@ -44,9 +74,13 @@ public final class SearchViewModel: ObservableObject {
         }
     }
     
-    private func performSearch(by text: String, in page: Int) {
+    private func performSearch(
+        by text: String,
+        in page: Int,
+        sortingType: String
+    ) {
         if !text.isEmpty {
-            searchService.search(by: text, in: page)
+            searchService.search(by: text, in: page, sortingType: sortingType)
                 .print("Search subscription: ")
                 .sink { [weak self] completion in
                     switch completion {

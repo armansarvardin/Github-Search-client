@@ -9,7 +9,10 @@ struct ContentView: View {
                 Button {
                     viewModel.signIn()
                 } label: {
-                    Text("Auth with Firebase")
+                    Text("Authenticate to Github")
+                        .padding()
+                        .background(.background)
+                        .cornerRadius(4)
                 }.fullScreenCover(isPresented: $viewModel.isAuthorized) {
                     AuthorizedView()
                 }

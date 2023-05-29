@@ -9,7 +9,11 @@ import Foundation
 import Combine
 
 public protocol SearchServiceProtocol {
-    func search(by name: String, in page: Int) -> AnyPublisher<Repositories, APIError>
+    func search(
+        by name: String,
+        in page: Int,
+        sortingType: String
+    ) -> AnyPublisher<Repositories, APIError>
 }
 
 public class SearchService: SearchServiceProtocol {
@@ -19,10 +23,15 @@ public class SearchService: SearchServiceProtocol {
     
     public func search(
         by name: String,
-        in page: Int
+        in page: Int,
+        sortingType: String
     ) -> AnyPublisher<Repositories, APIError> {
         return apiRouter.request(
-            SearchTarget.search(name: name, pageNumber: page),
+            SearchTarget.search(
+                name: name,
+                pageNumber: page,
+                sortingType: sortingType
+            ),
             responseType: Repositories.self
         )
     }
