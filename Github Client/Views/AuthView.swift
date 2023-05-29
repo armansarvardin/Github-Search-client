@@ -1,7 +1,7 @@
 import SwiftUI
 import Domain
 
-struct ContentView: View {
+struct AuthView: View {
     @ObservedObject private var viewModel = AuthViewModel()
     var body: some View {
         NavigationView {

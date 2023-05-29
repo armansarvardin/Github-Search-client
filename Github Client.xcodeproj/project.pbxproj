@@ -24,6 +24,7 @@
 		24455BBC2A23DF0B006204CE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BBB2A23DF0B006204CE /* UserProfileViewModel.swift */; };
 		24455BC02A23F7C6006204CE /* AuthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BBF2A23F7C6006204CE /* AuthorizedView.swift */; };
 		24455BC22A240413006204CE /* SortingSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BC12A240413006204CE /* SortingSegmentPicker.swift */; };
+		24455BC42A24903F006204CE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455BC32A24903F006204CE /* LoadingView.swift */; };
 		24C53A282A201B1400E38B19 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A272A201B1400E38B19 /* Owner.swift */; };
 		24C53A2A2A209E9600E38B19 /* RepositoryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A292A209E9600E38B19 /* RepositoryWebView.swift */; };
 		24C53A2D2A20D27400E38B19 /* RepositoryHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C53A2C2A20D27400E38B19 /* RepositoryHistoryView.swift */; };
@@ -103,6 +104,7 @@
 		24455BBB2A23DF0B006204CE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		24455BBF2A23F7C6006204CE /* AuthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedView.swift; sourceTree = "<group>"; };
 		24455BC12A240413006204CE /* SortingSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingSegmentPicker.swift; sourceTree = "<group>"; };
+		24455BC32A24903F006204CE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		24C53A272A201B1400E38B19 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		24C53A292A209E9600E38B19 /* RepositoryWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWebView.swift; sourceTree = "<group>"; };
 		24C53A2C2A20D27400E38B19 /* RepositoryHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHistoryView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				24FC0CA02A1FDEF7006547D6 /* RepositoryItemView.swift */,
 				24455BC12A240413006204CE /* SortingSegmentPicker.swift */,
+				24455BC32A24903F006204CE /* LoadingView.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				24455BA12A221956006204CE /* AuthView.swift in Sources */,
 				24FC0C652A1FB182006547D6 /* AppDelegate.swift in Sources */,
 				24C53A2A2A209E9600E38B19 /* RepositoryWebView.swift in Sources */,
+				24455BC42A24903F006204CE /* LoadingView.swift in Sources */,
 				24455BC02A23F7C6006204CE /* AuthorizedView.swift in Sources */,
 				24455BBA2A23DD38006204CE /* UserProfileView.swift in Sources */,
 				24FC0CA12A1FDEF7006547D6 /* RepositoryItemView.swift in Sources */,

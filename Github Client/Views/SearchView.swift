@@ -63,6 +63,13 @@ struct SearchView: View {
                             trailing: 0
                         )
                     )
+                    .overlay(content: {
+                        Group {
+                            if viewModel.isLoading {
+                                LoadingView()
+                            }
+                        }.background(.background)
+                    })
                     .navigationBarTitle("Search for Repositories", displayMode: .inline)
             }
         }

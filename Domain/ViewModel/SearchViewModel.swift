@@ -22,6 +22,7 @@ public final class SearchViewModel: ObservableObject {
     @Published public var items: [RepositoryItem] = []
     @Published private var pageNumber: Int = 1
     @Published public var sortingPickerType: SortingPickerType = .stars
+    @Published public var isLoading: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     var searchService: SearchServiceProtocol
@@ -80,6 +81,7 @@ public final class SearchViewModel: ObservableObject {
         sortingType: String
     ) {
         if !text.isEmpty {
+            isLoading = true
             searchService.search(by: text, in: page, sortingType: sortingType)
                 .print("Search subscription: ")
                 .sink { [weak self] completion in
@@ -89,7 +91,9 @@ public final class SearchViewModel: ObservableObject {
                     case .finished:
                         break
                     }
+                    self?.isLoading = false
                 } receiveValue: { [weak self] data in
+                    self?.isLoading = false
                     self?.items.append(contentsOf: data.items)
                 }.store(in: &localCancellable)
         }
